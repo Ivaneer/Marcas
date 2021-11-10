@@ -1,0 +1,16 @@
+li:hover{
+	background-color: #55CEFF;
+	text-decoration: line-through;
+	text-decoration-color: chocolate;
+}
+ol {
+	list-style-type: lower-greek;
+}
+div{
+	width:  200px;
+	background-color: skyblue;
+}
+h2{
+	text-decoration:underline;
+	text-orientation:upright ;
+}
