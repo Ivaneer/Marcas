@@ -4,14 +4,34 @@
   margin: auto;
   font-size: 80px;
   letter-spacing: 5px;
-  position: sticky;
+  position: fixed;
   top: 0;
  font-family: 'Baloo Tamma', cursive;
   background-color: lightskyblue;
+  left: 150px;
+
 }
 #contact{
 	position: fixed;
 	right: 0px;
 	text-align: center;
 	background-color: orange;
+    top: 500px;
+    left: 1150px;
+    border-radius: 7px;
+}
+
+.texto{
+    width: 40px;
+}
+#gato{
+    width: 60%;
+    position: sticky;
+    top: 0px;
+    left: 150px;
+}
+body{
+
+    background: url(../images/veterinario.jpg) no-repeat center fixed;
+    background-size: 110%;
 }
