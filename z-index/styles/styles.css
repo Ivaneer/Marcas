@@ -1,0 +1,41 @@
+div{
+	background-color: #65FEFE;
+	border: 2px solid #4D0084;
+	width: 80px;
+	height: 75px;
+	top: 8px;
+	position: absolute;
+}
+.d1{
+	left: 100px;
+	z-index: 5;
+	top: 26px;
+}
+
+#d1{
+	left: 80px;
+	z-index: 4;
+	top: 22px;
+}
+
+.d2{
+	left: 60px;
+	z-index: 3;
+	top: 18px;
+}
+
+
+#d2{
+	left: 40px;
+	z-index: 2;
+	top: 14px;
+}
+
+.d3{
+	left: 20px;
+	z-index: 1;
+}
+
+div:hover{
+	opacity: 0.2;
+}
