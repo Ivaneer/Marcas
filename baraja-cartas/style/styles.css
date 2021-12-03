@@ -1,0 +1,357 @@
+body{
+ background: url(../images/mesa.jpg) no-repeat center;
+ background-size:180%;
+}
+.carta{
+    border: 1px solid black;
+    height: 250px;
+    width: 180px;
+    border-radius: 8px;
+    background-color: antiquewhite;
+
+}
+#cinco_corazones{
+    transform: rotate(35deg);
+    position: absolute;
+    top: 320px;
+    left: 550px;
+    z-index: 5;
+    animation-name: cinco_corazones;
+    animation-duration: 2s;
+}
+#cinco_corazones:hover{
+    transform: rotate(35deg);
+    position: absolute;
+    top: 280px;
+    left: 590px;
+    z-index: 5;
+}
+.numero5{
+    position:absolute;
+    top: 12px;
+    left: 12px;
+    color: red;
+    font-size: 25px;
+}
+
+.numero5invert{
+    position:absolute;
+    top: 190px;
+    left: 160px;
+    transform: rotate(180deg);
+    color: red;
+    font-size: 25px;
+}
+#cinco_corazones>.palo{
+    color: red;
+    font-size: 55px;
+
+}
+#cinco_corazones>#palo1{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+#cinco_corazones>#palo2{
+    position: absolute;
+    top: 50px;
+    left: 120px;
+}
+#cinco_corazones>#palo3{
+    position: absolute;
+    top: 100px;
+    left: 85px;
+}
+#cinco_corazones>#palo4{
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+#cinco_corazones>#palo5{
+    position: absolute;
+    top: 150px;
+    left: 120px;
+}
+
+.numero2{
+    position: absolute;
+    top: 10px;
+    font-size: 25px;
+}
+#dos_treboles{
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 300px;
+    left: 280px;
+    z-index: 1;
+    animation-duration: 2s;
+    animation-name: dos_treboles;
+}
+#dos_treboles:hover{
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 270px;
+    left: 250px;
+    z-index: 1;
+   
+}
+.numero2invert{
+    position:absolute;
+    top: 195px;
+    left: 160px;
+    transform: rotate(180deg);
+    font-size: 25px;
+}
+.palo_3treboles{
+    font-size: 75px;
+}
+.palo_3treboles>#palo1{
+    position: absolute;
+    top: 25px;
+    left: 65px;
+}
+.palo_3treboles>#palo2{
+    position: absolute;
+    top: 150px;
+    left:65px;
+    transform: rotate(180deg);
+}
+#cuatro_treboles{
+    position: absolute;
+    top: 290px;
+    left: 410px;
+    z-index:3;
+    animation-name: cuatro_treboles;
+    animation-duration: 2s;
+}
+#cuatro_treboles:hover{
+    position: absolute;
+    top: 250px;
+    left: 410px;
+    z-index:3;
+}
+.numero4{
+    position: absolute;
+    top: 10px;
+    font-size: 25px;
+}
+.numero4invert{
+    position:absolute;
+    top: 195px;
+    left: 160px;
+    transform: rotate(180deg);
+    font-size: 25px;
+}
+.palo_4treboles{
+    font-size: 75px;
+}
+.palo_4treboles>#palo1{
+    position: absolute;
+    top: 25px;
+    left: 35px;
+}
+.palo_4treboles>#palo2{
+    position: absolute;
+    top: 25px;
+    left: 95px;
+}
+.palo_4treboles>#palo3{
+    position: absolute;
+    top: 150px;
+    left:35px;
+    transform: rotate(180deg);
+}
+.palo_4treboles>#palo4{
+    position: absolute;
+    top: 150px;
+    left:95px;
+    transform: rotate(180deg);
+}
+#tres_picas{
+transform: rotate(-15deg);
+    position: absolute;
+    top: 290px;
+    left: 350px;
+    z-index: 2;
+    animation-name: tres_picas;
+    animation-duration: 2s;
+}
+#tres_picas:hover{
+transform: rotate(-15deg);
+    position: absolute;
+    top: 250px;
+    left: 300px;
+    z-index: 2;
+}
+.numero3{
+    position: absolute;
+    top: 10px;
+    font-size: 25px;
+}
+.numero3invert{
+    position:absolute;
+    top: 195px;
+    left: 160px;
+    transform: rotate(180deg);
+    font-size: 25px;
+}
+.palo_picas{
+    font-size: 75px;
+}
+.palo_picas>#palo1{
+    position: absolute;
+    top: 15px;
+    left:60px;
+}
+.palo_picas>#palo2{
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+.palo_picas>#palo3{
+    position: absolute;
+    top: 150px;
+    left:60px;
+    transform: rotate(180deg);
+}
+#siete_treboles{
+transform: rotate(15deg);
+    position: absolute;
+    top: 300px;
+    left: 480px;
+    z-index: 4;
+    animation-name: siete_treboles;
+    animation-duration: 2s;
+}
+#siete_treboles:hover{
+transform: rotate(15deg);
+    position: absolute;
+    top: 260px;
+    left: 520px;
+    z-index: 4;
+}
+
+.numero7{
+    position: absolute;
+    top: 10px;
+    font-size: 25px;
+}
+.numero7invert{
+    position:absolute;
+    top: 195px;
+    left: 160px;
+    transform: rotate(180deg);
+    font-size: 25px;
+}
+.palo_7treboles{
+    font-size: 75px;
+}
+.palo_7treboles>#palo1{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.palo_7treboles>#palo2{
+    position: absolute;
+    top: 15px;
+    left: 120px;
+}
+.palo_7treboles>#palo3{
+    position: absolute;
+    top: 55px;
+    left: 70px;
+}.palo_7treboles>#palo4{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}.palo_7treboles>#palo5{
+    position: absolute;
+    top: 80px;
+    left: 120px;
+}
+.palo_7treboles>#palo6{
+    position: absolute;
+    top: 140px;
+    left:20px;
+    transform: rotate(180deg);
+}
+.palo_7treboles>#palo7{
+    position: absolute;
+    top: 140px;
+    left:120px;
+    transform: rotate(180deg);
+}
+
+
+@keyframes cinco_corazones{
+    0%{
+        position: absolute;
+        left: 70px;
+        top: 150px;
+        transform: rotate(0deg);
+    }
+    100%{
+    transform: rotate(35deg);
+    position: absolute;
+    top: 320px;
+    left: 550px;
+
+    }
+}
+
+@keyframes dos_treboles{
+    0%{
+        position: absolute;
+        left: 70px;
+        top: 150px;
+        transform: rotate(0deg);
+    }
+    100%{
+    transform: rotate(-35deg);
+    position: absolute;
+    top: 300px;
+    left: 280px;
+
+    }
+}
+@keyframes tres_picas{
+    0%{
+        position: absolute;
+        left: 70px;
+        top: 150px;
+        transform: rotate(0deg);
+    }
+    100%{
+   transform: rotate(-15deg);
+    position: absolute;
+    top: 290px;
+    left: 350px;
+    }
+}
+@keyframes cuatro_treboles{
+    0%{
+        position: absolute;
+        left: 70px;
+        top: 150px;
+        transform: rotate(0deg);
+    }
+    100%{
+    position: absolute;
+    top: 290px;
+    left: 410px;
+    }
+}
+@keyframes siete_treboles{
+    0%{
+        position: absolute;
+        left: 70px;
+        top: 150px;
+        transform: rotate(0deg);
+    }
+    100%{
+   transform: rotate(15deg);
+    position: absolute;
+    top: 300px;
+    left: 480px;
+    }
+}
