@@ -1,4 +1,4 @@
-body{
+.body1{
 	background: url(../images/fondo.jpg) no-repeat ;
 	background-size: auto;
 }
@@ -7,10 +7,10 @@ body{
 	position: absolute;
         left: 0px;
         top: 150px;
-       display: block;
 	animation-name: noel;
 	animation-duration: 8s;
 	animation-fill-mode: forwards;
+    z-index: 1;
 }
 @keyframes noel{
     0%{
@@ -40,31 +40,103 @@ body{
     transform: rotate(0deg);
     position: absolute;
     top: 420px;
-    left: 280px;
-    transform: rotate3d(1, 2, -1, 180deg);
+    left: 350px;
+    transform: rotate3d(1, 0, -1, 180deg);
+    image-rendering: optimizeSpeed;
 
     }
 }
-
- #casa{
+#noelno{
     position: absolute;
-  left: 420px;
-  left: 280px;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  }
-.noel:hover .casa{
-  border-radius:50%;
--webkit-border-radius:50%;
-box-shadow: 0px 0px 15px 15px #ec731e;
--webkit-box-shadow: 0px 0px 15px 15px #ec731e;
-transform: rotate(360deg);
--webkit-transform: rotate(360deg);
+    top: 450px;
+    left: 370px;
+    height: 75px;
+    cursor: pointer;
+    border-color: dotted red;
+    opacity: 0;
 }
 
+#muneco {
+    position: absolute;
+    top: 650px;
+    left: 800px;
+    max-height: 20%;
+    animation: muneco 8s infinite;
+}
+
+@keyframes muneco {
+    20% {transform: rotate(-25deg);}
+    60% {transform: rotate(25deg);}
+    80% {transform: rotate(0deg);}
+    85% {transform: rotate(-5deg)}
+    90% {transform: rotate(5deg)}
+    100% {transform: rotate(0deg)}
+
+}
+#estrella {
+    position: absolute;
+    right: -300px;
+    top: 20px;
+    max-width: 50px;
+    transform: rotate(25deg);
+    animation-name: amimestrella;
+    animation-delay: 6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 0;
+
+}
+
+@keyframes amimestrella {
+    10%{visibility: visible;
+     position: absolute;
+    left: 1000px;
+    top: 20px;}
+    60% {transform: rotate(-15deg)}
+    100% {position: absolute;
+    top: 390px;
+    left: 390px;}
+}
+
+.body2{
+    background: url(../images/casa.jpg) no-repeat ;
+    background-size: auto;
+    width: 150%;
+}
+#papanoel{
+    position: absolute;
+    top: 280px;
+    left: 250px;
+ width: 250px;
+}
+#boca{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+ width: 150px
+}
+#texto{
+    position: absolute;
+    top: 220px;
+    left: 173px;
+    width: 200px;
+    text-align: center;
+    font-size: 17px;
+}
+#navidad{
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    max-height: 50%;
+    animation: navidad 8s infinite;
+}
+
+@keyframes muneco {
+    20% {transform: rotate(-5deg);}
+    60% {transform: rotate(5deg);}
+    80% {transform: rotate(0deg);}
+    85% {transform: rotate(-5deg)}
+    90% {transform: rotate(5deg)}
+    100% {transform: rotate(0deg)}
+
+}
