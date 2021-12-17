@@ -84,6 +84,7 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     z-index: 0;
+    visibility: hidden;
 
 }
 
@@ -95,7 +96,8 @@
     60% {transform: rotate(-15deg)}
     100% {position: absolute;
     top: 390px;
-    left: 390px;}
+    left: 390px;
+}
 }
 
 .body2{
@@ -127,11 +129,11 @@
     position: absolute;
     top: 50px;
     left: 500px;
-    max-height: 50%;
+    width: 350px;
     animation: navidad 8s infinite;
 }
 
-@keyframes muneco {
+@keyframes navidad {
     20% {transform: rotate(-5deg);}
     60% {transform: rotate(5deg);}
     80% {transform: rotate(0deg);}
@@ -139,4 +141,9 @@
     90% {transform: rotate(5deg)}
     100% {transform: rotate(0deg)}
 
+}
+
+@media screen and (max-width: 767px) {
+  .body2,{
+    width: 50%;}
 }
