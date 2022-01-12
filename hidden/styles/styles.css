@@ -1,0 +1,37 @@
+li{
+	display: inline;
+	background-color: #33b5e5;
+	padding: 8px;
+	cursor: pointer;
+	width: 110px;
+	font-size: 70px;
+}
+a{
+	color: white;
+	text-decoration: none;
+	display: inline;
+}
+
+li:hover{
+	background-color: #0099cc;
+}
+
+
+@media only screen and (max-width: 1024px){
+	.r4{
+		display:none ;
+	}
+
+}
+@media only screen and (max-width: 768px){
+	.r3{
+		display:none ;
+	}
+
+}
+@media only screen and (max-width: 480px){
+	.r2{
+		display:none ;
+	}
+
+}
