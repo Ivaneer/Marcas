@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container mt-3">
+	<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#exp">Experiencia
+	</button>
+	<div id="exp" class="collapse">
+		Hola soy Ivan, tengo experiencia en el sector.
+	</div>
+	<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#table">Formacion
+	</button>
+	<div id="table" class="collapse">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Años</th>
+					<th>Estudios</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2017-2020</td>
+					<td>Informatica</td>
+				</tr>
+			</tbody>
+			
+		</table>
+	</div>
+	<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#form">Formacion
+	</button>
+	<div id="form" class="collapse">
+		<h2>Formulario de contacto</h2>
+		<form method="POST">
+			<div class="mb-3 mt-3">
+				<label for="empresa">Empresa:</label>
+				<input type="empresa" class="form-control" name="empresa" id="empresa" placeholder="Nombre de tu empresa">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+				<label for="obs">Observaciones:</label>
+				<textarea class="form-control" id="obs"></textarea><br>
+				<button class="btn btn-primary">Enviar</button>
+			</div>
+			
+		</form>
+	</div>
+
+
+
+</div>
+</body>
+</html>
