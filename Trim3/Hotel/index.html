@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>DOM</title>
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+  <script src="js/funciones.js"> </script>
+</head>
+<body>
+  <p>Para reservar, rellena el formulario:</p>
+  <label for="adultos">Numero de adultos</label>
+  <select id="adultos" name="adultos" onchange="nombres();">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select><br><br><div></div>
+  <label for="ninos">Numero de niños</label>
+  <select id="ninos" name="ninos" onchange="nombres();">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select><br><br><div></div>
+  <input type="button" value="ENVIAR" onclick="validar();">
+</body>
+
+</html>
