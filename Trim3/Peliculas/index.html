@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Cine</title>
+  <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+  <script src="js/funciones.js"> </script>
+  <style>
+    body{
+      background-image: url(img/cine.jpg);
+      color: black;
+      text-align: center;
+      position: relative;
+      top: 150px;
+      right: 100px;
+    }
+    h1{
+      color: royalblue;
+    }
+  </style>
+</head>
+<body onload="genero();">
+  <h1>CINES EL BICHO</h1>
+  <p>Para registrar la pelicula, rellene los siguientes campos:</p>
+  <label for="titulo">Titulo</label>
+  <input type="text" name="titulo" onblur="validar();"><br>
+  <label for="genero">Genero</label>
+  <select id="genero" name="" >
+  </select><br><br>
+  <input type="button" value="ENVIAR" onclick="enviar();">
+</body>
+
+</html>
