@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Primer AJAX</title>
+	<script>
+		function llamarAJAX() {
+			var obj_ajax= new XMLHttpRequest();
+			obj_ajax.open("GET", "archivo_ajax.txt");
+			obj_ajax.send();
+			obj_ajax.onreadystatechange=function(){
+				if(obj_ajax.readyState==4){
+					//alert("llegaron los datos: " +obj_ajax.responseText);
+					document.getElementById("contenido").innerHTML=obj_ajax.responseText;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+   <div id="contenido"></div>
+
+   <input type="button" onclick="llamarAJAX();">
+</body>
+</html>

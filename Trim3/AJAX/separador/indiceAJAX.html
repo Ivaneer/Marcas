@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX</title>
+	<script>
+	function cargarDesplegable() {
+		var peticion=new XMLHttpRequest();
+		var lista="";
+		peticion.onreadystatechange=function(){
+			if(peticion.readyState==4 && peticion.status==200){
+				var respuesta=peticion.responseText;
+				lista=respuesta.split(",");
+
+				var obj_select=document.createElement("select");
+		for(i=0; i<lista.length; i++){
+			var obj_option=document.createElement("option");
+			obj_option.innerHTML=lista[i];
+			obj_select.appendChild(obj_option);
+		}
+		document.getElementsByTagName("body")[0].appendChild(obj_select); 
+	  }
+	}
+	peticion.open("GET","archivo_ajax.txt");
+	peticion.send();
+}
+
+		
+	</script>
+</head>
+<body onload="cargarDesplegable()">
+   <div id="contenido"></div>
+
+
+</body>
+</html>
