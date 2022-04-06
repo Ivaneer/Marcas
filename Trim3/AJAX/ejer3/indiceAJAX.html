@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX</title>
+	<script>
+	function Cargar() {
+
+		document.body.innerHTML ='';
+		var peticion=new XMLHttpRequest();
+		var lista="";
+		var parrafo="";
+		peticion.onreadystatechange=function(){
+			if(peticion.readyState==4 && peticion.status==200){
+				var respuesta=peticion.responseText;
+				parrafo=respuesta.split("\n");
+
+				for(i=0; i<parrafo.length; i++){
+				lista=parrafo[i].split(",");
+				var Createp=document.createElement("p");
+			Createp.innerHTML=("Nombre: " +lista[0] + " apellido1: " +lista[1] +" apellido2: " + lista[2]);
+			document.getElementsByTagName("body")[0].appendChild(Createp); 
+		}
+				
+	  }
+	}
+	peticion.open("GET","csv.txt");
+	peticion.send();
+}
+	</script>
+</head>
+<body>
+   <button onclick="Cargar();">Click</button>
+
+</body>
+</html>
