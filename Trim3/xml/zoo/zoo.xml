@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zoo>
+	<animal>
+		<nombre>Jorge</nombre>
+		<especie>Homo sapiens</especie>
+	</animal>
+	<animal>
+		<nombre>Sandra</nombre>
+		<especie>Urodela</especie>
+	</animal>
+</zoo>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function cargarLibros()
+        {
+            var xhr=new XMLHttpRequest();
+            //readyState
+            //status
+            //responseText
+            xhr.onreadystatechange=function()
+                {
+                    if(xhr.readyState==4 && xhr.status==200)
+                    {
+                        //Ya tengo los datos
+                        var obj_xml=xhr.responseXML;
+                        tratarXML(obj_xml);
+
+                    }   
+
+                }
+            xhr.open("GET", "books.xml");
+            xhr.send();
+
+        }
+        function tratarXML(xml)
+        {
+            var lista_autores=xml.getElementsByTagName("autor");
+            var lista_titulos=xml.getElementsByTagName("titulo");
+            for (i=0; i<lista_autores.length; i++)
+            {
+                var nombre_autor=lista_autores[i].childNodes[0].nodeValue;
+                var nombre_titulo=lista_titulos[i].childNodes[0].nodeValue;
+                var crearP=document.createElement("p");
+                crearP.innerHTML="Autor: "+nombre_autor+"  Titulo: "+nombre_titulo;
+                document.getElementsByTagName("body")[0].appendChild(crearP); 
+            }
+        }
+    </script>
+</head>
+<body onload="cargarLibros();">
+
+
+
+</body>
+</html>
