@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo"></div>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+        let table
+    }
+};
+xhttp.open("GET", "amigos.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var peticion= xml.responseXML;
+    var arr_nombres=peticion.getElementsByTagName("nombre");
+    var arr_telefonos=peticion.getElementsByTagName("telefono");
+    var tabla=document.createElement("table");
+    var amigos=peticion.getElementsByTagName("amigo");
+    
+    for(i=0; i<amigos.length; i++){
+        nombre=arr_nombres[i].childNodes[0].nodeValue;
+        telefono=arr_telefonos[i].childNodes[0].nodeValue;
+
+        var fila=document.createElement("tr");
+        var celda_nombre=document.createElement("td");
+        celda_nombre.innerHTML="Nombre: "+nombre;
+        celda_nombre.style.border = "2px solid black";
+
+        var celda_telefono=document.createElement("td");
+        celda_telefono.innerHTML="Telefono: "+telefono;
+        celda_telefono.style.border = "2px solid black";
+
+        fila.appendChild(celda_nombre);
+        fila.appendChild(celda_telefono);
+        tabla.appendChild(fila);
+        tabla.style.border = "1px solid black";
+
+        document.getElementById("demo").appendChild(tabla)
+    }
+}
+</script>
+
+</body>
+</html>

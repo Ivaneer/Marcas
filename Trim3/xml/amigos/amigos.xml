@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<amigos>
+  <amigo>
+    <nombre>Pepe</nombre>
+    <telefono>65868356</telefono>
+  </amigo>
+  <amigo>
+    <nombre>Federico</nombre>
+    <telefono>68989098</telefono>
+  </amigo>
+  
+</amigos>

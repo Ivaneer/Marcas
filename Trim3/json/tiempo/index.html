@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+    function hola(){
+ document.getElementById("contenedor").innerHTML=" ";
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+
+    }
+}
+xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?appid=57703a7a9ab7b873a99116a3ea379748&q="+document.getElementsByTagName("select")[0].value, true);
+xhttp.send();
+}
+function myFunction(json) {
+    var peticion= json.responseText;
+    var obj_json= JSON.parse(peticion);
+    var Ciudad=document.getElementsByTagName("select")[0].value
+    var temp_min=obj_json.main.temp_min-273;
+    var temp_max=obj_json.main.temp_max-273;
+    var mensaje="<h1>CIUDAD: "+Ciudad+"<h2>Temperatura minima: "+temp_min+"ºC <br> Temperatura Max: "+temp_max+"ºC";
+    var parrafo=document.createElement("p");
+    parrafo.innerHTML=mensaje;
+    parrafo.style.textAlign = 'center';
+    parrafo.style.border = '2px solid black';
+    document.getElementById("contenedor").appendChild(parrafo);
+}
+
+</script>
+    <b>¿Que quieres buscar?</b><br>
+     <label for="buscador">Ciudad</label>
+    <select name="q" id="buscador" required>
+        <option value="Barcelona">Barcelona</option>
+        <option value="China">China</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Venezuela">Venezuela</option>
+    </select>
+    <input type="submit" value="Enviar" onclick="hola();">
+
+<div id="contenedor"></div>
+</body>
+</html>

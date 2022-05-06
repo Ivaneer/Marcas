@@ -27,14 +27,20 @@
         {
             var lista_autores=xml.getElementsByTagName("autor");
             var lista_titulos=xml.getElementsByTagName("titulo");
-            for (i=0; i<lista_autores.length; i++)
-            {
-                var nombre_autor=lista_autores[i].childNodes[0].nodeValue;
-                var nombre_titulo=lista_titulos[i].childNodes[0].nodeValue;
-                var crearP=document.createElement("p");
-                crearP.innerHTML="Autor: "+nombre_autor+"  Titulo: "+nombre_titulo;
-                document.getElementsByTagName("body")[0].appendChild(crearP); 
-            }
+            for (i=0; i<lista_titulos.length; i++)
+                {
+                 var nombre_titulo=lista_titulos[i].childNodes[0].nodeValue;
+                 var crearP=document.createElement("p");
+                    crearP.innerHTML="Titulo: "+nombre_titulo;
+                    document.getElementsByTagName("body")[0].appendChild(crearP); 
+                }
+
+            for (i=0; i<lista_autores.length; i++){
+                 var nombre_autor=lista_autores[i].childNodes[0].nodeValue;
+                 var crearP=document.createElement("p");
+                    crearP.innerHTML="Autor: "+nombre_autor
+                    document.getElementsByTagName("body")[0].appendChild(crearP); 
+                }
         }
     </script>
 </head>
