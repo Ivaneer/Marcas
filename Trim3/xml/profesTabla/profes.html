@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="contenedor_profesores"></div>
+
+<script>
+	 var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        Profesores(this.responseXML);
+        
+    }
+};
+xhttp.open("GET", "profesores.xml", true);
+xhttp.send();
+function Profesores(xml) {
+	var tabla=document.createElement("table");
+		tabla.innerHTML="<tr>"+"<td>Profesor </td>"+"<td>Asignaturas</td>"+"</tr>";
+		tabla.style.border="1px solid black";
+	var lista_profes=xml.getElementsByTagName("profesor");
+	var profes= new Array();
+	for(i=0; i<lista_profes.length;i++){
+		profes[i]= new Object();
+		var profe=lista_profes[i];
+		var obj_profe=profe.getElementsByTagName("nombre")[0];
+		var nombre_profe=obj_profe.childNodes[0].nodeValue;
+		var lista_asignaturas=profe.getElementsByTagName("asignatura");
+		profes[i].nombre=nombre_profe
+		profes[i].asignaturas=[];
+		for (j=0; j<lista_asignaturas.length; j++) {
+			var obj_asignatura=lista_asignaturas[j];
+			var asignaturas=obj_asignatura.childNodes[0].nodeValue;
+			profes[i].asignaturas[j]=asignaturas;
+		}
+
+	}
+
+	for(i=0; i<profes.length;i++){
+		var filas=document.createElement("tr");
+		var columnas =document.createElement("td");
+		columnas.style.border ="3px solid black";
+		columnas.innerHTML=profes[i].nombre;
+		var lista_profes_asignaturas=profes[i].asignaturas;
+		filas.appendChild(columnas);
+		for(j=0; j<lista_profes_asignaturas.length;j++){
+			var columnas_asig =document.createElement("td");
+			columnas_asig.innerHTML=profes[i].asignaturas[j];
+			columnas_asig.style.border ="1px solid black";
+			filas.appendChild(columnas_asig);
+		}
+		tabla.appendChild(filas);
+		document.getElementById("contenedor_profesores").appendChild(tabla);
+	}
+
+}
+</script>
+
+</body>
+</html>
